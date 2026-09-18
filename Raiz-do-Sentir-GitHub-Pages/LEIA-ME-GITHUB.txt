@@ -1,0 +1,50 @@
+RAIZ DO SENTIR
+Arquivos prontos para o GitHub Pages
+
+CONTEÚDO DO PACOTE
+
+1. index.html
+   Página principal do site.
+
+2. blog.html
+   Página de conteúdos com as quatro matérias:
+   Ansiedade não é falta de força de vontade, é sinal
+   Luto não é um problema a ser resolvido
+   O que realmente está sob o seu controle?
+   Quando o corpo fala: somatizações emocionais e saúde mental
+
+3. assets
+   Logo, fotografias, depoimentos e imagens das matérias.
+
+COMO COLOCAR NO GITHUB
+
+1. Extraia o arquivo ZIP no computador.
+2. Abra o repositório TerapeutaJeffersonDelgado no GitHub.
+3. Mantenha os arquivos CNAME e .nojekyll que já estão no repositório.
+4. Clique em Add file e depois em Upload files.
+5. Envie index.html, blog.html e a pasta assets.
+6. Quando o GitHub avisar que index.html já existe, confirme a substituição.
+7. Escreva no campo do commit: Atualiza site Raiz do Sentir
+8. Selecione Commit directly to the main branch.
+9. Clique em Commit changes.
+10. Aguarde entre dois e cinco minutos e abra www.raizdosentir.com.
+
+IMPORTANTE
+
+Não envie o arquivo ZIP para dentro do repositório. O GitHub Pages não extrai o ZIP.
+Envie os arquivos que estão dentro dele.
+
+Os arquivos index.html e blog.html devem ficar na raiz do repositório.
+A pasta assets também deve ficar na raiz.
+
+Estrutura correta:
+
+TerapeutaJeffersonDelgado/
+  index.html
+  blog.html
+  CNAME
+  .nojekyll
+  assets/
+    imagens do site
+
+O JavaScript e o CSS já estão dentro dos arquivos HTML. O arquivo support.js antigo não é necessário para esta versão, mas deixá-lo no repositório não interfere no funcionamento.
