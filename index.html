@@ -1,458 +1,135 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07373d">
+  <meta name="description" content="Terapia online com Jefferson Delgado para brasileiros no Brasil e no exterior. Ansiedade, luto, autoestima e padrões emocionais.">
+  <title>Raiz do Sentir | Jefferson Delgado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2307373d'/%3E%3Cpath d='M32 10v43M32 27c-9-1-15-6-18-14 10 0 16 5 18 14Zm0 9c9-1 15-6 18-14-10 0-16 5-18 14ZM32 43c-7 0-12 4-16 10m16-10c7 0 12 4 16 10' fill='none' stroke='%23d6b878' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#07373d;--deep:#04282e;--blue:#8fc7d7;--mist:#eaf5f5;--paper:#f9fbfa;--gold:#d6b878;--line:rgba(7,55,61,.18);--serif:"Newsreader",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}a{color:inherit}button{font:inherit}
+    .grain{position:fixed;inset:0;z-index:20;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+    .nav{position:fixed;z-index:30;top:0;left:0;right:0;height:86px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(249,251,250,.86);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s}.nav.scrolled{height:72px;border-color:var(--line)}
+    .brand{display:flex;align-items:center;gap:13px;text-decoration:none}.brand-mark{width:50px;height:50px;border:1px solid rgba(7,55,61,.2);border-radius:50%;display:grid;place-items:center;overflow:hidden;background:#fff;flex:0 0 auto}.brand-mark img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.55)}.brand-name{font-family:var(--serif);font-size:1.25rem;line-height:1}.brand-name small{display:block;font:500 .61rem/1.3 var(--sans);letter-spacing:.17em;text-transform:uppercase;margin-top:5px}
+    .links{display:flex;align-items:center;gap:30px}.links a{text-decoration:none;font-size:.86rem;font-weight:600;letter-spacing:.02em}.links a:not(.nav-cta){position:relative}.links a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:-5px;height:1px;background:var(--ink);transition:.25s}.links a:hover::after{right:0}.nav-cta{background:var(--ink);color:white;padding:12px 19px;border-radius:999px}.menu{display:none;border:0;background:none;color:var(--ink);width:46px;height:46px;border-radius:50%;font-size:1.4rem}
+    .hero{min-height:100svh;padding:145px 5vw 70px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(330px,.75fr);gap:4vw;align-items:center;position:relative}.hero::before{content:"";position:absolute;width:45vw;height:45vw;border:1px solid rgba(143,199,215,.32);border-radius:50%;left:-28vw;top:21vh}.eyebrow{display:flex;align-items:center;gap:14px;text-transform:uppercase;letter-spacing:.2em;font-size:.69rem;font-weight:600}.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold)}
+    h1{font-family:var(--serif);font-weight:300;letter-spacing:-.045em;font-size:clamp(4.2rem,8.2vw,8.1rem);line-height:.82;margin:34px 0 28px;max-width:930px}.hero-em{display:block;margin-left:13%;font-style:italic;color:#226d79}.lead{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.65rem);line-height:1.35;max-width:620px;margin:0 0 34px}.actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:15px;padding:15px 22px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}.btn .arrow{display:grid;place-items:center;background:#fff;color:var(--ink);width:31px;height:31px;border-radius:50%;transition:.25s}.btn:hover .arrow{transform:translateX(4px)}.text-link{text-underline-offset:5px;font-weight:600;font-size:.9rem}
+    .portrait-wrap{position:relative;min-height:630px;align-self:stretch;display:flex;align-items:center;justify-content:center}.portrait-back{position:absolute;width:min(38vw,510px);aspect-ratio:.82;background:var(--ink);border-radius:47% 53% 56% 44% / 38% 44% 56% 62%;transform:rotate(4deg)}.portrait{position:relative;width:min(34vw,470px);aspect-ratio:.82;object-fit:cover;object-position:center 24%;border-radius:44% 56% 42% 58% / 51% 36% 64% 49%;filter:saturate(.82) contrast(1.03);transform:rotate(-2deg);box-shadow:0 36px 90px rgba(4,40,46,.28)}.portrait-note{position:absolute;right:1%;bottom:8%;width:166px;height:166px;border-radius:50%;background:var(--gold);display:grid;place-items:center;text-align:center;padding:25px;font-family:var(--serif);font-size:1.15rem;line-height:1.1;transform:rotate(7deg)}
+    .ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:17px 0}.ticker-track{display:inline-block;animation:ticker 28s linear infinite;font:300 1.45rem/1 var(--serif);letter-spacing:.02em}.ticker i{color:var(--gold);padding:0 26px}@keyframes ticker{to{transform:translateX(-50%)}}
+    .section{padding:130px 7vw}.section-kicker{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:#397985}.display{font:300 clamp(3rem,6vw,6rem)/.98 var(--serif);letter-spacing:-.04em;margin:17px 0}.intro{display:grid;grid-template-columns:.55fr 1.45fr;gap:7vw;align-items:start}.intro-copy{max-width:820px}.intro-copy p{font:300 clamp(1.65rem,2.7vw,2.7rem)/1.28 var(--serif);margin:0}.intro-copy p em{color:#397985}.micro{font-size:.88rem;max-width:330px;margin-top:37px;color:#49686c}
+    .paths{background:var(--mist);padding:120px 5vw}.paths-head{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:end;margin-bottom:65px}.paths-head p{max-width:490px;margin:0 0 8px}.path-list{border-top:1px solid var(--line)}.path{display:grid;grid-template-columns:90px 1.2fr .8fr 60px;gap:24px;align-items:center;padding:34px 1vw;border-bottom:1px solid var(--line);text-decoration:none;transition:.3s}.path:hover{background:rgba(255,255,255,.65);padding-left:2vw;padding-right:2vw}.num{font-family:var(--serif);color:#5f8a90}.path h3{font:400 clamp(1.55rem,2.5vw,2.6rem)/1.1 var(--serif);margin:0}.path p{margin:0;color:#4b6b70;font-size:.92rem}.path-arrow{width:48px;height:48px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:1.2rem}
+    .method{background:var(--deep);color:#fff;position:relative;overflow:hidden}.method::after{content:"sentir";position:absolute;right:-.05em;bottom:-.23em;font:300 23vw/1 var(--serif);color:rgba(143,199,215,.06)}.method-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw;position:relative;z-index:1}.method .display{color:#fff}.method-quote{font:300 clamp(2rem,3.8vw,4rem)/1.08 var(--serif);margin:0}.method-quote em{color:var(--gold)}.principles{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-top:70px}.principle{padding-top:18px;border-top:1px solid rgba(255,255,255,.2)}.principle strong{font-family:var(--serif);font-size:1.35rem;font-weight:400}.principle p{color:#b8d3d5;font-size:.9rem;line-height:1.55}
+    .about{display:grid;grid-template-columns:.78fr 1.05fr;gap:8vw;align-items:center}.about-photo{position:relative}.about-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:42% 42% 22px 22px;filter:saturate(.92);box-shadow:0 30px 75px rgba(4,40,46,.16)}.about-photo::after{content:"Londres • Brasil • Online";position:absolute;left:-25px;bottom:34px;background:var(--gold);padding:12px 20px;border-radius:999px;font-size:.75rem;font-weight:600;letter-spacing:.08em}.about-copy .display{margin-top:13px}.about-copy>p{font-size:1.06rem;max-width:670px}.credentials{display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;margin:45px 0}.credential{padding:18px 0;border-top:1px solid var(--line)}.credential span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#56838a;margin-bottom:5px}.credential strong{font-family:var(--serif);font-weight:400;font-size:1.2rem}
+    .programs{padding-top:20px}.programs-header{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:48px}.programs-header .display{max-width:800px}.program-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:18px}.program{min-height:440px;padding:35px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;background:#dceef0;position:relative;overflow:hidden;border-radius:2px}.program:nth-child(2){background:var(--gold)}.program:nth-child(3){background:var(--ink);color:#fff}.program-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.15em}.program h3{font:300 clamp(2rem,3vw,3.5rem)/1 var(--serif);margin:0 0 12px}.program p{max-width:340px;font-size:.9rem}.program .circle{position:absolute;width:190px;height:190px;border:1px solid currentColor;border-radius:50%;right:-68px;top:-68px;opacity:.3}.program-bottom{display:flex;justify-content:space-between;align-items:end;gap:20px}.program-icon{width:45px;height:45px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center}
+    .testimonials{background:var(--deep);color:#fff;padding:120px 5vw;overflow:hidden}.testimonial-head{display:flex;justify-content:space-between;gap:45px;align-items:end;margin-bottom:55px}.testimonial-head .display{max-width:840px;margin-bottom:0}.testimonial-head p{max-width:420px;color:#b8d3d5;margin:0}.testimonial-controls{display:flex;gap:10px;margin-top:24px}.testimonial-control{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font-size:1.25rem;cursor:pointer;transition:.2s}.testimonial-control:hover{background:#fff;color:var(--deep)}.testimonial-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,440px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:8px 5vw 30px 0}.testimonial-track::-webkit-scrollbar{display:none}.testimonial-card{scroll-snap-align:start;min-height:650px;padding:34px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:42px 42px 10px 42px;display:flex;flex-direction:column}.testimonial-card:nth-child(even){border-radius:10px 42px 42px 42px;background:rgba(143,199,215,.1)}.testimonial-top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:30px}.testimonial-photo{width:92px;height:92px;border-radius:50%;flex:0 0 auto;background-repeat:no-repeat;background-color:#dceef0;border:2px solid rgba(255,255,255,.28);box-shadow:0 12px 35px rgba(0,0,0,.22)}.testimonial-photo.template{background-size:240% auto;background-position:100% 40%}.testimonial-photo.matheus{background-size:cover;background-position:center}.testimonial-photo.lucca{background-size:165% auto;background-position:92% 34%}.testimonial-photo.vera{background-size:cover;background-position:center}.quote-mark{font:300 5.5rem/.7 var(--serif);color:var(--gold);opacity:.85}.testimonial-quote{font:300 1.17rem/1.52 var(--serif);margin:0 0 30px;color:#eff8f8}.testimonial-quote.compact{font-size:1.02rem;line-height:1.45}.testimonial-quote.long{font-size:.94rem;line-height:1.42}.testimonial-person{margin-top:auto;padding-top:22px;border-top:1px solid rgba(255,255,255,.16)}.testimonial-person strong{display:block;font:400 1.3rem/1.2 var(--serif)}.testimonial-person span{display:block;margin-top:5px;color:#9fc8cd;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em}.testimonial-note{color:#9fc8cd;font-size:.78rem;margin:8px 0 0}
+    .contact{margin:0 2.5vw 2.5vw;background:var(--blue);border-radius:48px 48px 8px 8px;padding:100px 7vw;display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;align-items:end;position:relative;overflow:hidden}.contact::after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(7,55,61,.18);border-radius:50%;right:-180px;top:-210px}.contact .display{font-size:clamp(3.5rem,7.6vw,7.8rem);max-width:900px}.contact p{max-width:430px}.contact-actions{display:flex;gap:14px;flex-wrap:wrap}.contact .btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+    footer{padding:50px 5vw 30px}.footer-grid{display:grid;grid-template-columns:1fr auto auto;gap:6vw;align-items:start}.footer-title{font:300 2rem/1 var(--serif)}.footer-col{display:flex;flex-direction:column;gap:8px}.footer-col span{font-size:.67rem;text-transform:uppercase;letter-spacing:.15em;color:#68888c;margin-bottom:6px}.footer-col a{text-decoration:none;font-size:.88rem}.legal{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:30px;font-size:.72rem;color:#6a8588}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.links{position:fixed;inset:72px 14px auto;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:25px;display:none;flex-direction:column;align-items:stretch;box-shadow:0 25px 70px rgba(4,40,46,.14)}.links.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:130px}.hero h1{font-size:clamp(4rem,16vw,6.6rem)}.portrait-wrap{min-height:590px}.portrait-back{width:min(80vw,490px)}.portrait{width:min(74vw,450px)}.intro,.method-grid,.about,.contact{grid-template-columns:1fr}.paths-head{grid-template-columns:1fr}.path{grid-template-columns:55px 1fr 48px}.path p{display:none}.program-grid{grid-template-columns:1fr}.program{min-height:350px}.testimonial-head{display:block}.testimonial-head p{margin-top:25px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid .brand{grid-column:1/-1}.contact{border-radius:32px 32px 8px 8px}}
+    @media(max-width:560px){.nav{padding:0 18px}.brand-name{font-size:1.08rem}.hero{padding-left:20px;padding-right:20px}.hero-em{margin-left:4%}.portrait-wrap{min-height:500px}.portrait-note{width:130px;height:130px;font-size:.93rem;right:-7px}.section,.paths,.testimonials{padding:90px 22px}.intro{gap:25px}.principles,.credentials{grid-template-columns:1fr}.path{padding:27px 0;gap:12px}.programs-header{display:block}.testimonial-track{grid-auto-columns:min(86vw,380px);padding-right:22px}.testimonial-card{min-height:560px;padding:28px}.testimonial-quote{font-size:1.08rem}.testimonial-quote.compact{font-size:.98rem}.contact{margin:0 10px 10px;padding:75px 22px}.footer-grid{grid-template-columns:1fr}.footer-grid .brand{grid-column:auto}.legal{flex-direction:column}.actions{align-items:flex-start;flex-direction:column}.ticker-track{font-size:1.2rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+    .testimonial-photo.lucca{background-size:220% auto;background-position:100% 50%}
+  </style>
 </head>
 <body>
-<x-dc>
-
-<helmet>
-  <title>Raiz do Sentir, Jefferson Delgado, Psicanalista</title>
-  <link rel="stylesheet" href="_ds/broadsheet-625dd92a-b971-4239-8f1d-332892db82c1/styles.css">
-  <script src="_ds/broadsheet-625dd92a-b971-4239-8f1d-332892db82c1/_ds_bundle.js"></script>
-</helmet>
-
-<div style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4);">
-
-  <nav class="nav" style="flex-wrap: wrap; padding-left: 0; padding-right: 0;">
-    <span class="nav-brand" style="display: flex; align-items: center; gap: var(--space-2);">
-      <img src="assets/logo-raiz-do-sentir.png" alt="Raiz do Sentir" style="width: 40px; height: 40px; border-radius: 50%; display: block;">
-      Raiz do Sentir
-    </span>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#depoimentos">Depoimentos</a>
-    <a href="#blog">Blog</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contato">Contato</a>
-    <a class="btn btn-primary" href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="margin-left: var(--space-2);">
-      {{ whatsappIcon }}
-      WhatsApp
+  <div class="grain" aria-hidden="true"></div>
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="Raiz do Sentir, página inicial">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/raiz-do-sentir-logo.jpg" alt=""></span>
+      <span class="brand-name">Raiz do Sentir<small>Jefferson Delgado</small></span>
     </a>
-  </nav>
-
-  <section id="inicio" style="display: flex; flex-wrap: wrap; gap: var(--space-8); align-items: center; padding: var(--space-8) 0;">
-    <div style="flex: 1 1 420px;">
-      <div class="tag tag-accent" style="margin-bottom: var(--space-3);">Terapia Online</div>
-      <h1 style="font-size: 52px; margin-bottom: var(--space-1);">Jefferson Delgado</h1>
-      <h4 style="font-weight: 400; color: var(--color-accent-700); margin-bottom: var(--space-4);">Psicanalista e Terapeuta Integrativo</h4>
-      <p style="font-size: 18px; max-width: 46ch;">Escuta sem pressa e um caminho construído junto, para quem enfrenta ansiedade, luto ou dificuldade de regular emoções, atendimento individual ou em grupo, on-line, em português.</p>
-      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4);">
-        <a class="btn btn-primary" href="{{ whatsappUrl }}" target="_blank" rel="noopener">Agendar uma conversa</a>
-        <a class="btn btn-secondary" href="#servicos">Conhecer os serviços</a>
+    <nav class="links" id="links" aria-label="Navegação principal">
+      <a href="#terapia">Terapia</a><a href="#sobre">Sobre mim</a><a href="#jornadas">Jornadas</a><a href="blog.html">Conteúdos</a><a href="#contato">Contato</a><a class="nav-cta" href="https://wa.me/447577423115?text=Ol%C3%A1%2C%20Jefferson.%20Conheci%20seu%20trabalho%20atrav%C3%A9s%20do%20site%20Raiz%20do%20Sentir%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia." target="_blank" rel="noopener">Agendar conversa</a>
+    </nav>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="links" aria-label="Abrir menu">☰</button>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">Terapia online • Brasil e exterior</div>
+        <h1>Voltar para <span class="hero-em">si mesmo.</span></h1>
+        <p class="lead">Um espaço para compreender o que você sente, interromper padrões que machucam e construir novas formas de viver.</p>
+        <div class="actions"><a class="btn" href="https://wa.me/447577423115?text=Ol%C3%A1%2C%20Jefferson.%20Conheci%20seu%20trabalho%20atrav%C3%A9s%20do%20site%20Raiz%20do%20Sentir%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia." target="_blank" rel="noopener">Quero conversar <span class="arrow">↗</span></a><a class="text-link" href="#terapia">Conheça o acompanhamento</a></div>
       </div>
-    </div>
-    <div style="flex: 1 1 320px; max-width: 420px;">
-      <figure style="border-radius: var(--radius-lg); aspect-ratio: 4/5; overflow: hidden; box-shadow: var(--shadow-md); margin: 0;">
-        <img src="assets/jefferson.jpg" alt="Jefferson Delgado, psicanalista" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-      </figure>
-    </div>
-  </section>
-
-  <section id="sobre" style="padding: var(--space-8) 0;">
-    <h6 style="color: var(--color-accent-700);">Sobre mim</h6>
-    <div style="display: flex; flex-wrap: wrap; gap: var(--space-8);">
-      <p style="flex: 1 1 480px; font-size: 17px; max-width: 62ch;">Sou Jefferson Delgado, psicanalista registrado na ABP (Associação Brasileira de Psicanálise) e terapeuta integrativo pela FOYHT, no Reino Unido. Minha formação reúne Psicanálise, Hipnoterapia clínica, TRG e PNL, com foco em ansiedade, luto e regulação emocional. Vivo no Reino Unido desde 2010 e atendo em português, online.</p>
-      <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: var(--space-2);">
-        <h6 style="opacity: 0.6;">Formação</h6>
-        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
-          <span class="tag tag-outline">ABP</span>
-          <span class="tag tag-outline">FOYHT</span>
-          <span class="tag tag-outline">Psicanálise</span>
-          <span class="tag tag-outline">Hipnoterapia Clínica</span>
-          <span class="tag tag-outline">TRG</span>
-          <span class="tag tag-outline">PNL</span>
-        </div>
+      <div class="portrait-wrap reveal">
+        <div class="portrait-back"></div>
+        <img class="portrait" src="assets/jefferson-london.jpg" alt="Jefferson Delgado em Londres">
+        <div class="portrait-note">Escuta com profundidade, cuidado e direção.</div>
       </div>
-    </div>
-  </section>
+    </section>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">ANSIEDADE <i>✦</i> LUTO <i>✦</i> AUTOESTIMA <i>✦</i> RELACIONAMENTOS <i>✦</i> PADRÕES EMOCIONAIS <i>✦</i> ANSIEDADE <i>✦</i> LUTO <i>✦</i> AUTOESTIMA <i>✦</i> RELACIONAMENTOS <i>✦</i> PADRÕES EMOCIONAIS <i>✦</i></div></div>
 
-  <section id="servicos" style="padding: var(--space-8) 0;">
-    <h6 style="color: var(--color-accent-700);">Serviços</h6>
-    <h2 style="margin-bottom: var(--space-6);">Como posso te acompanhar</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4);">
-      <div class="card elev-sm">
-        <span class="card-kicker">Atendimento individual</span>
-        <h3 class="card-title">Terapia Individual</h3>
-        <p class="card-body">Atendimento individual para adultos com luto, ansiedade ou dificuldade de regular emoções. Abordagem integrativa, com base na psicanálise e recursos como hipnoterapia clínica quando o caso pede algo mais direto que conversa. Escuto primeiro, sem pressa, e construímos juntos o caminho certo pro seu momento. Atendimento on-line.</p>
-        <div class="card-meta">Individual · Online</div>
-        <a class="btn btn-ghost" href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="align-self: flex-start;">Agendar →</a>
+    <section class="section intro" id="terapia">
+      <div class="reveal"><span class="section-kicker">01 • O seu momento</span><p class="micro">Você não precisa chegar com tudo organizado. A terapia começa a partir do que está vivo em você agora.</p></div>
+      <div class="intro-copy reveal"><p>Nem sempre o sofrimento aparece como crise. Às vezes, ele surge como <em>cansaço, culpa, autocobrança</em> ou a sensação de viver para todos, menos para você.</p></div>
+    </section>
+
+    <section class="paths">
+      <div class="paths-head reveal"><div><span class="section-kicker">Como posso acompanhar você</span><h2 class="display">O que pede cuidado hoje?</h2></div><p>O atendimento parte da sua história, sem fórmulas prontas. Juntos, identificamos o que mantém o sofrimento e trabalhamos novas respostas emocionais.</p></div>
+      <div class="path-list reveal">
+        <a class="path" href="#contato"><span class="num">01</span><h3>Ansiedade e sobrecarga</h3><p>Pensamentos acelerados, medo, controle, exaustão e dificuldade para descansar.</p><span class="path-arrow">↗</span></a>
+        <a class="path" href="#contato"><span class="num">02</span><h3>Luto e perdas</h3><p>Um lugar seguro para sustentar a ausência e reorganizar a vida sem apagar o vínculo.</p><span class="path-arrow">↗</span></a>
+        <a class="path" href="#contato"><span class="num">03</span><h3>Autoestima e relações</h3><p>Limites, culpa, dependência emocional e padrões que se repetem nos vínculos.</p><span class="path-arrow">↗</span></a>
+        <a class="path" href="#contato"><span class="num">04</span><h3>Compulsões e procrastinação</h3><p>Compreender o que existe por trás do comportamento para sair do ciclo de cobrança.</p><span class="path-arrow">↗</span></a>
       </div>
-      <div class="card elev-sm">
-        <span class="card-kicker">Grupo terapêutico</span>
-        <h3 class="card-title">Ansiedade sob Controle</h3>
-        <p class="card-body">Protocolo criado para quem vive em estado de alerta constante e não consegue mais distinguir entre perigo real e ansiedade automática. Trabalha a raiz do padrão de ansiedade, não só o sintoma do momento, com ferramentas para reconhecer os próprios gatilhos e recuperar a sensação de controle sobre o próprio corpo e mente.</p>
-        <div class="card-meta">Grupo · 10 encontros · Online</div>
-        <a class="btn btn-ghost" href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="align-self: flex-start;">Saber mais →</a>
+    </section>
+
+    <section class="section method">
+      <div class="method-grid"><div class="reveal"><span class="section-kicker">A forma de cuidar</span><h2 class="display">Profundidade sem perder o chão.</h2></div><div class="reveal"><p class="method-quote">Sua história merece mais do que conselhos rápidos. Ela precisa de <em>escuta, sentido e movimento.</em></p><div class="principles"><div class="principle"><strong>Escuta psicanalítica</strong><p>Para reconhecer os conflitos, defesas e repetições que organizam sua forma de sentir.</p></div><div class="principle"><strong>Abordagem integrativa</strong><p>Recursos escolhidos de acordo com sua necessidade, seu ritmo e o objetivo do processo.</p></div><div class="principle"><strong>Direção prática</strong><p>Compreensão que chega à vida cotidiana, aos limites, às escolhas e aos relacionamentos.</p></div><div class="principle"><strong>Presença segura</strong><p>Um encontro sem julgamento, com acolhimento responsável e comunicação clara.</p></div></div></div></div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="about-photo reveal"><img src="assets/jefferson-terapia-online-vertical.png" alt="Jefferson Delgado conduzindo atendimento terapêutico online"></div>
+      <div class="about-copy reveal"><span class="section-kicker">02 • Quem acompanha você</span><h2 class="display">Eu sou Jefferson Delgado.</h2><p>Psicanalista e terapeuta integrativo. Vivo em Londres e acompanho adultos que enfrentam ansiedade, luto, baixa autoestima, compulsões e conflitos nos relacionamentos.</p><p>Minha experiência na educação e na clínica reforçou uma convicção: compreender a origem do sofrimento muda a forma como você responde ao presente. O processo respeita sua singularidade e transforma reflexão em escolhas possíveis.</p>
+        <div class="credentials"><div class="credential"><span>Formação</span><strong>Psicanálise Clínica</strong></div><div class="credential"><span>Especialização</span><strong>Ansiedade e Luto</strong></div><div class="credential"><span>Recursos</span><strong>TRG, Hipnoterapia e PNL</strong></div><div class="credential"><span>Atendimento</span><strong>100% online</strong></div></div>
+        <a class="text-link" href="#contato">Conheça meu trabalho e fale comigo →</a>
       </div>
-      <div class="card elev-sm">
-        <span class="card-kicker">Grupo terapêutico</span>
-        <h3 class="card-title">Travessia</h3>
-        <p class="card-body">Grupo terapêutico ao vivo, com dez encontros, para quem está atravessando um luto e não quer fazer isso sozinho. Cada sessão trabalha uma etapa específica da dor, com espaço para falar, ser ouvido e sair com ferramentas práticas para os dias entre um encontro e outro. Não é terapia individual, é acompanhamento em grupo com estrutura clínica por trás.</p>
-        <div class="card-meta">Grupo · 10 encontros · Online</div>
-        <a class="btn btn-ghost" href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="align-self: flex-start;">Saber mais →</a>
+    </section>
+
+    <section class="section programs" id="jornadas">
+      <div class="programs-header reveal"><div><span class="section-kicker">03 • Para seguir além da sessão</span><h2 class="display">Jornadas com começo, caminho e propósito.</h2></div><p>Experiências guiadas para quem deseja trabalhar um tema específico em grupo ou no próprio ritmo.</p></div>
+      <div class="program-grid reveal">
+        <a class="program" href="#contato"><span class="circle"></span><span class="program-tag">Jornada guiada • 7 dias</span><div class="program-bottom"><div><h3>Voltar a ser você</h3><p>Para reconhecer papéis, culpa e sobrecarga emocional, recuperando espaço para si.</p></div><span class="program-icon">↗</span></div></a>
+        <a class="program" href="#contato"><span class="circle"></span><span class="program-tag">Grupo terapêutico</span><div class="program-bottom"><div><h3>Travessia</h3><p>Dez encontros para acolher o luto e reconstruir sentido sem apressar o processo.</p></div><span class="program-icon">↗</span></div></a>
+        <a class="program" href="#contato"><span class="circle"></span><span class="program-tag">Programa em grupo</span><div class="program-bottom"><div><h3>Ansiedade sob controle</h3><p>Um processo para compreender gatilhos, reduzir o ciclo de medo e retomar presença.</p></div><span class="program-icon">↗</span></div></a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="depoimentos" style="padding: var(--space-8) 0;">
-    <h6 style="color: var(--color-accent-700);">Depoimentos</h6>
-    <h2 style="margin-bottom: var(--space-6);">Quem já passou por aqui</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4);">
-      <div class="card elev-sm">
-        <p class="card-body" style="font-style: italic; font-family: var(--font-heading); font-size: 15px; opacity: 1;">Essa experiência foi transformadora. Descobri traumas que nem sabia o quanto me afetavam e, já nas primeiras semanas, percebi mudanças reais em mim. Ressignificar e seguir sem essas amarras foi libertador. Obrigada, Jefferson Delgado, por me ajudar a superar e encontrar paz dentro de mim.</p>
-        <div class="card-meta">
-          <img src="assets/rosto-mavira.png" alt="Mavirã Santana" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none;">
-          Mavirã Santana · Cliente
-        </div>
+    <section class="testimonials" id="depoimentos">
+      <div class="testimonial-head reveal"><div><span class="section-kicker">04 • Depoimentos</span><h2 class="display">Histórias que ganharam novas palavras.</h2><div class="testimonial-controls" aria-label="Navegar pelos depoimentos"><button class="testimonial-control" type="button" data-testimonial-scroll="prev" aria-label="Depoimento anterior">←</button><button class="testimonial-control" type="button" data-testimonial-scroll="next" aria-label="Próximo depoimento">→</button></div></div><div><p>Relatos de pessoas que encontraram espaço para compreender emoções, elaborar experiências e construir novas respostas.</p><p class="testimonial-note">Cada experiência terapêutica é singular.</p></div></div>
+      <div class="testimonial-track reveal" id="testimonial-track" tabindex="0" aria-label="Depoimentos de clientes">
+        <article class="testimonial-card"><div class="testimonial-top"><div class="testimonial-photo vera" role="img" aria-label="Vera Floristhé" style="background-image:url('assets/depoimento-vera.jpg')"></div><span class="quote-mark" aria-hidden="true">“</span></div><p class="testimonial-quote">Jefferson, quero agradecer pelo método TAGzero. É simplesmente fantástico, dinâmico, terapêutico e divertido, entre outras qualidades. Indico para todos, 100%!</p><div class="testimonial-person"><strong>Vera Floristhé</strong><span>Psicóloga</span></div></article>
+        <article class="testimonial-card"><div class="testimonial-top"><div class="testimonial-photo template" role="img" aria-label="Manoel Martins" style="background-image:url('assets/depoimento-manoel.jpg')"></div><span class="quote-mark" aria-hidden="true">“</span></div><p class="testimonial-quote compact">Cheguei à terapia em um momento em que me sentia preso em padrões emocionais que não conseguia entender. Durante as sessões, fui percebendo um processo transformador, que me ajudou a acessar lembranças e sentimentos de forma segura, trazendo compreensão e ressignificação. Hoje me sinto mais leve, confiante e em paz comigo mesmo. A terapia foi essencial nessa mudança e recomendo. Muito obrigado, Jefferson Delgado.</p><div class="testimonial-person"><strong>Manoel Martins</strong><span>Cliente</span></div></article>
+        <article class="testimonial-card"><div class="testimonial-top"><div class="testimonial-photo template" role="img" aria-label="Mavirá Santana" style="background-image:url('assets/depoimento-mavira.jpg')"></div><span class="quote-mark" aria-hidden="true">“</span></div><p class="testimonial-quote">Essa experiência foi transformadora. Descobri traumas que nem sabia o quanto me afetavam e, já nas primeiras semanas, percebi mudanças reais em mim. Ressignificar e seguir sem essas amarras foi libertador. Obrigada, Jefferson Delgado, por me ajudar a superar e encontrar paz dentro de mim.</p><div class="testimonial-person"><strong>Mavirá Santana</strong><span>Cliente</span></div></article>
+        <article class="testimonial-card"><div class="testimonial-top"><div class="testimonial-photo matheus" role="img" aria-label="Matheus Moscoso" style="background-image:url('assets/depoimento-matheus-circular.png')"></div><span class="quote-mark" aria-hidden="true">“</span></div><p class="testimonial-quote long">Comecei a terapia com o Jefferson em um momento em que eu estava perdido, sem saber exatamente o que sentia e por que sentia. Tinha muitos episódios de explosões de raiva, agressividade e pensamentos negativos sobre mim mesmo, principalmente pela culpa que vinha após esses momentos.<br><br>Hoje me vejo mais calmo e centrado. Consigo entender muito melhor minhas emoções e lidar com elas de forma mais saudável. Ainda tenho meus deslizes, mas estou me esforçando para melhorar a cada dia.<br><br>Sou muito grato ao Jefferson pelo trabalho, pela dedicação e pelo cuidado que teve comigo durante toda essa caminhada. Espero continuar trilhando esse caminho ao lado dele por muito tempo.</p><div class="testimonial-person"><strong>Matheus Moscoso</strong><span>Cliente</span></div></article>
+        <article class="testimonial-card"><div class="testimonial-top"><div class="testimonial-photo template" role="img" aria-label="Diana Quirino" style="background-image:url('assets/depoimento-diana.jpg')"></div><span class="quote-mark" aria-hidden="true">“</span></div><p class="testimonial-quote long">Jefferson, meu colega querido, boa tarde! Quero te dar um feedback de coração sobre o nosso trabalho. Essas sessões de autoconhecimento têm sido muito importantes para mim e têm contribuído muito para o meu crescimento pessoal e profissional.<br><br>Tenho levado muitos dos aprendizados para a minha vida e também aplicado alguns deles nas minhas sessões. Tenho percebido o quanto isso tem sido positivo e transformador no meu trabalho com meus clientes.<br><br>Quero agradecer pela dedicação, pela troca, pela partilha de conhecimento e por tudo o que você acrescenta a cada encontro. Sou muito grata por essa caminhada e por aprender com você toda semana. Tem feito muita diferença para mim!</p><div class="testimonial-person"><strong>Diana Quirino</strong><span>Terapeuta</span></div></article>
+        <article class="testimonial-card"><div class="testimonial-top"><div class="testimonial-photo lucca" role="img" aria-label="Lucca Goulart" style="background-image:url('assets/depoimento-lucca.jpg')"></div><span class="quote-mark" aria-hidden="true">“</span></div><p class="testimonial-quote">Cuidar da mente com um profissional mudou meu jogo. Hoje vivo com muito mais leveza e direção.</p><div class="testimonial-person"><strong>Lucca Goulart</strong><span>Cliente</span></div></article>
       </div>
-      <div class="card elev-sm">
-        <p class="card-body" style="font-style: italic; font-family: var(--font-heading); font-size: 15px; opacity: 1;">Cuidar da mente com um profissional mudou meu jogo, hoje vivo com muito mais leveza e direção.</p>
-        <div class="card-meta">
-          <img src="assets/rosto-lucca.png" alt="Lucca Goulart" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none;">
-          Lucca Goulart · Cliente
-        </div>
-      </div>
-      <div class="card elev-sm">
-        <p class="card-body" style="font-style: italic; font-family: var(--font-heading); font-size: 15px; opacity: 1;">Cheguei à terapia em um momento em que me sentia preso em padrões emocionais que não conseguia entender. Durante as sessões, fui percebendo um processo transformador, que me ajudou a acessar lembranças e sentimentos de forma segura, trazendo compreensão e ressignificação. Hoje me sinto mais leve, confiante e em paz comigo mesmo. Muito obrigado, Jefferson Delgado.</p>
-        <div class="card-meta">
-          <img src="assets/rosto-manoel.png" alt="Manoel Martins" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none;">
-          Manoel Martins · Cliente
-        </div>
-      </div>
-      <div class="card elev-sm">
-        <p class="card-body" style="font-style: italic; font-family: var(--font-heading); font-size: 15px; opacity: 1;">Comecei a terapia em um momento em que estava perdido, sem saber exatamente o que sentia e por que sentia. Hoje me vejo mais calmo e centrado, e consigo entender muito melhor minhas emoções e lidar com elas de forma mais saudável.</p>
-        <div class="card-meta">
-          <img src="assets/rosto-matheus.png" alt="Matheus Moscoso" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none;">
-          Matheus Moscoso · Cliente
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="blog" style="padding: var(--space-8) 0;">
-    <h6 style="color: var(--color-accent-700);">Blog</h6>
-    <h2 style="margin-bottom: var(--space-6);">Artigos</h2>
-    <div style="max-width: 780px;">
-      <button onClick="{{ toggleArticle5 }}" style="display: flex; width: 100%; flex-wrap: wrap; gap: var(--space-4); align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0; font-family: inherit; color: inherit;">
-        <img src="assets/blog-artigo-5.jpg" alt="" style="width: 220px; height: 150px; object-fit: cover; border-radius: var(--radius-md); flex: none; box-shadow: var(--shadow-sm);">
-        <div style="flex: 1 1 320px; display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);">
-          <div>
-            <h3 class="card-title" style="margin-bottom: var(--space-1);">Ansiedade não é falta de força de vontade, é sinal</h3>
-            <p style="opacity: 0.75; margin: 0;">Por que a ansiedade funciona como um alerta psíquico, e o que ajuda de verdade além de "só entender".</p>
-          </div>
-          <span style="font-size: 26px; line-height: 1; color: var(--color-accent); flex: none;">{{ article5Symbol }}</span>
-        </div>
-      </button>
-
-      <sc-if value="{{ article5Open }}" hint-placeholder-val="{{ false }}">
-        <article style="max-width: 68ch; margin-top: var(--space-6);">
-          <h2 style="font-size: 28px; margin-bottom: var(--space-4);">Ansiedade não é falta de força de vontade, é sinal</h2>
-          <p style="font-size: 17px;">Existe uma expectativa silenciosa de que dar conta de tudo, sempre, no mesmo ritmo, é o normal. Quem não consegue sustentar esse ritmo sem sintomas físicos, sem noites maldormidas, sem a sensação constante de estar um passo atrás, tende a interpretar isso como uma falha pessoal. Mas a ansiedade, na maior parte das vezes, não é falha. É sinal.</p>
-
-          <h4 style="margin-top: var(--space-6);">O que a psicanálise entende por angústia</h4>
-          <p style="font-size: 17px;">Freud diferenciou a angústia como sinal, um alerta que o psiquismo emite diante de algo que ameaça o equilíbrio interno, da angústia traumática, que inunda o aparelho psíquico sem que haja recursos suficientes para lidar com ela no momento em que aparece. Boa parte do sofrimento ansioso contemporâneo tem esse segundo formato, uma sensação de estar sendo atravessado por algo maior do que a capacidade atual de resposta.</p>
-          <p style="font-size: 17px;">Isso muda a pergunta central. Em vez de "como faço essa ansiedade parar", a pergunta que costuma abrir caminho é "o que essa ansiedade está tentando sinalizar que eu ainda não consegui simbolizar". Muitas vezes é um conflito não resolvido, uma exigência interna desproporcional, ou uma antecipação de perda que o corpo sente antes de a mente conseguir nomear.</p>
-
-          <h4 style="margin-top: var(--space-6);">Por que só entender não é suficiente</h4>
-          <p style="font-size: 17px;">Entender de onde vem a ansiedade ajuda, mas raramente é suficiente sozinho. A ansiedade tem um componente fisiológico direto, o sistema nervoso entra em estado de alerta e o corpo responde com tensão muscular, alteração de sono, alteração de apetite, taquicardia, antes mesmo de qualquer elaboração consciente acontecer. Por isso o trabalho puramente verbal, sem nenhum recurso de regulação corporal, tende a deixar a pessoa entendendo o problema intelectualmente, mas ainda presa nele fisicamente.</p>
-          <p style="font-size: 17px;">É aqui que entra o valor de combinar elaboração psíquica com recursos integrativos de regulação, técnicas de respiração, atenção ao corpo, e estrutura de rotina, não como substituto do trabalho analítico, mas como apoio para que o corpo tenha, no dia a dia, uma saída diferente da crise.</p>
-
-          <h4 style="margin-top: var(--space-6);">Dois formatos, propósitos diferentes</h4>
-          <p style="font-size: 17px;">Esse trabalho pode acontecer de formas distintas. Em atendimento individual, o processo é conduzido no tempo e na história de cada pessoa, com espaço para investigar as raízes específicas daquela ansiedade. Já em formato de grupo, como o Ansiedade Sob Controle, um protocolo estruturado ao longo de dez encontros, o foco está em consciência, regulação e autonomia diante dos sintomas, com o benefício adicional de estar entre outras pessoas enfrentando questões parecidas. São caminhos diferentes, não concorrentes, e a escolha entre eles depende do que cada pessoa está buscando naquele momento.</p>
-
-          <h4 style="margin-top: var(--space-6);">O que fica</h4>
-          <p style="font-size: 17px;">A ansiedade não desaparece por decreto de força de vontade, e insistir nessa lógica costuma piorar o quadro, porque soma à ansiedade original a frustração de "não conseguir controlar" o que sente. O caminho mais sustentável costuma ser outro, entender o que aquele sinal está apontando e, ao mesmo tempo, dar ao corpo ferramentas reais para não viver em estado de alerta permanente.</p>
-        </article>
-      </sc-if>
-    </div>
-
-    <div style="max-width: 780px; margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-divider);">
-      <button onClick="{{ toggleArticle4 }}" style="display: flex; width: 100%; flex-wrap: wrap; gap: var(--space-4); align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0; font-family: inherit; color: inherit;">
-        <img src="assets/blog-artigo-4.jpg" alt="" style="width: 220px; height: 150px; object-fit: cover; border-radius: var(--radius-md); flex: none; box-shadow: var(--shadow-sm);">
-        <div style="flex: 1 1 320px; display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);">
-          <div>
-            <h3 class="card-title" style="margin-bottom: var(--space-1);">Luto não é um problema a ser resolvido</h3>
-            <p style="opacity: 0.75; margin: 0;">Sobre a pressa social diante da perda, o trabalho psíquico do luto e o espaço que o grupo Travessia oferece.</p>
-          </div>
-          <span style="font-size: 26px; line-height: 1; color: var(--color-accent); flex: none;">{{ article4Symbol }}</span>
-        </div>
-      </button>
-
-      <sc-if value="{{ article4Open }}" hint-placeholder-val="{{ false }}">
-        <article style="max-width: 68ch; margin-top: var(--space-6);">
-          <h2 style="font-size: 28px; margin-bottom: var(--space-4);">Luto não é um problema a ser resolvido</h2>
-          <p style="font-size: 17px;">Existe uma pressa social em torno da dor da perda. Alguém morre, e em poucas semanas já se espera que a pessoa enlutada "esteja bem", volte ao trabalho no ritmo de sempre, sorria nas fotos de novo. Essa pressa não vem de má intenção, vem do desconforto que o luto do outro provoca em quem está perto. Mas ela cobra um preço alto de quem está de fato atravessando a perda.</p>
-
-          <h4 style="margin-top: var(--space-6);">O que Freud já dizia sobre isso</h4>
-          <p style="font-size: 17px;">Freud, em Luto e Melancolia, fez uma distinção que continua sendo útil mais de cem anos depois. O luto é um trabalho psíquico, não um estado que simplesmente passa com o tempo. É um processo de elaboração em que o eu precisa, aos poucos, retirar o investimento afetivo depositado em quem morreu, sem apagar o vínculo, mas transformando a relação com ele.</p>
-          <p style="font-size: 17px;">Quando esse trabalho não encontra espaço para acontecer, seja por pressão externa para "seguir em frente", seja por dificuldade interna de simbolizar a perda, o luto pode se complicar. Ele não desaparece, ele se desloca. Vira ansiedade sem nome, insônia, irritação constante, sensação de vazio que ninguém consegue explicar direito.</p>
-
-          <h4 style="margin-top: var(--space-6);">O que a psicanálise oferece que a pressa social não oferece</h4>
-          <p style="font-size: 17px;">O espaço analítico não tenta apressar nada. Ele oferece o que o luto precisa para ser trabalhado, tempo e escuta. É na fala, na repetição das lembranças, nas associações que parecem não ter nexo à primeira vista, que a perda vai sendo simbolizada. Isso não significa "superar", significa integrar a perda a uma nova forma de existir no mundo, uma em que a ausência tem lugar.</p>
-
-          <h4 style="margin-top: var(--space-6);">Por que só a fala às vezes não basta</h4>
-          <p style="font-size: 17px;">Ao mesmo tempo, luto não mora só na linguagem. Ele mora no corpo, no sono, no apetite, nos gestos automáticos de pegar o telefone para ligar para alguém que não está mais ali. Por isso o trabalho integrativo tem espaço nesse processo, não como substituto da elaboração psíquica, mas como complemento a ela. Recursos corporais, práticas de regulação emocional e, para quem tem essa referência cultural, rituais de passagem construídos por diferentes tradições, ajudam a dar forma a algo que muitas vezes não cabe inteiramente em palavras.</p>
-
-          <h4 style="margin-top: var(--space-6);">Um espaço pensado para isso</h4>
-          <p style="font-size: 17px;">Foi pensando nessa junção, elaboração psíquica e cuidado integrativo do corpo e da experiência, que o Travessia foi construído. É um grupo terapêutico ao longo de dez encontros, feito para quem está atravessando a dor de uma perda e precisa de um espaço estruturado para isso, com outras pessoas que entendem, sem a pressa que o resto do mundo impõe.</p>
-
-          <h4 style="margin-top: var(--space-6);">O que fica</h4>
-          <p style="font-size: 17px;">Luto não é um problema a ser resolvido com rapidez. É um processo que pede tempo, escuta e, muitas vezes, companhia. Se você está nesse momento, ou conhece alguém que está, talvez o mais importante não seja apressar a passagem, e sim garantir que ela tenha onde acontecer.</p>
-          <p style="font-size: 17px;">Se isso ressoa com você, você pode conhecer mais sobre o Travessia ou marcar uma conversa inicial comigo.</p>
-        </article>
-      </sc-if>
-    </div>
-
-    <div style="max-width: 780px; margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-divider);">
-      <button onClick="{{ toggleArticle }}" style="display: flex; width: 100%; flex-wrap: wrap; gap: var(--space-4); align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0; font-family: inherit; color: inherit;">
-        <img src="assets/blog-artigo-1.jpg" alt="" style="width: 220px; height: 150px; object-fit: cover; border-radius: var(--radius-md); flex: none; box-shadow: var(--shadow-sm);">
-        <div style="flex: 1 1 320px; display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);">
-          <div>
-            <h3 class="card-title" style="margin-bottom: var(--space-1);">O que realmente está sob o seu controle?</h3>
-            <p style="opacity: 0.75; margin: 0;">Uma ferramenta simples para lidar com o overthinking: o Círculo de Controle, Influência e Preocupação.</p>
-          </div>
-          <span style="font-size: 26px; line-height: 1; color: var(--color-accent); flex: none;">{{ articleSymbol }}</span>
-        </div>
-      </button>
-
-      <sc-if value="{{ articleOpen }}" hint-placeholder-val="{{ false }}">
-        <article style="max-width: 68ch; margin-top: var(--space-6);">
-          <p style="font-size: 17px;">Você já se pegou pensando demais sobre coisas que não pode mudar? Tentando prever o futuro, entender o comportamento das pessoas ou resolver tudo de uma vez? Pois é… isso tem um nome: overthinking, ou, em bom português, pensar demais.</p>
-          <p style="font-size: 17px;">A verdade é que nem tudo está sob o nosso controle, e entender isso é libertador. Existe uma ferramenta muito simples, mas poderosa, que pode te ajudar a perceber isso com mais clareza: o Círculo de Controle, Influência e Preocupação.</p>
-
-          <h4 style="margin-top: var(--space-6);">O círculo de controle</h4>
-          <p style="font-size: 17px;">Aqui estão as únicas coisas que realmente dependem de você: seus pensamentos, suas ações, seu foco e suas reações.</p>
-          <p style="font-size: 17px;">Tudo o que você sente e escolhe fazer parte desse espaço. Quando você concentra sua energia aqui, começa a sentir mais equilíbrio, segurança e leveza.</p>
-          <p style="font-size: 17px;">Em vez de tentar mudar o mundo, você muda o seu modo de reagir a ele. E isso muda tudo.</p>
-
-          <h4 style="margin-top: var(--space-6);">O círculo de influência</h4>
-          <p style="font-size: 17px;">Neste círculo estão as coisas que você não controla totalmente, mas pode influenciar. O ambiente de trabalho, a forma como as pessoas te tratam, a qualidade dos seus relacionamentos…</p>
-          <p style="font-size: 17px;">Você não tem poder sobre o comportamento dos outros, mas pode inspirar mudanças com a sua atitude, a sua escuta e o seu exemplo.</p>
-          <p style="font-size: 17px;">Muitas vezes, é aqui que pequenas ações geram grandes transformações.</p>
-
-          <h4 style="margin-top: var(--space-6);">O círculo de preocupação</h4>
-          <p style="font-size: 17px;">Esse é o lugar onde a maioria de nós se perde. A guerra, o clima, a economia, o passado, as opiniões alheias…</p>
-          <p style="font-size: 17px;">Tudo isso nos afeta, é claro. Mas não está sob o nosso controle.</p>
-          <p style="font-size: 17px;">E quanto mais tempo passamos presos a essas preocupações, mais ansiedade e frustração sentimos. É como tentar segurar o vento.</p>
-
-          <h4 style="margin-top: var(--space-6);">Realoque sua energia</h4>
-          <p style="font-size: 17px;">Toda vez que perceber que está pensando demais, faça uma pausa e se pergunte: "Isso está sob o meu controle ou não?"</p>
-          <p style="font-size: 17px;">Se a resposta for "não", respire fundo e traga sua atenção de volta para o que está nas suas mãos. É ali que mora a sua força.</p>
-          <p style="font-size: 17px;">Focar no que você pode controlar não significa ignorar o resto, significa escolher onde colocar sua energia e sua paz mental.</p>
-
-          <h4 style="margin-top: var(--space-6);">Conclusão</h4>
-          <p style="font-size: 17px;">No fim das contas, a vida fica muito mais leve quando a gente aprende a colocar cada coisa no seu lugar, o que podemos controlar, o que podemos influenciar e o que simplesmente precisamos aceitar. O exercício de reconhecer esses limites não é sobre desistir, e sim sobre se libertar da ilusão de controle absoluto. Quando focamos nossa energia no que realmente depende de nós, abrimos espaço para a tranquilidade, para o autocuidado e para um tipo de força que nasce de dentro. Lembre-se: o que está sob o seu controle é o suficiente para transformar a sua vida, um passo de cada vez.</p>
-        </article>
-      </sc-if>
-    </div>
-
-    <div style="max-width: 780px; margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-divider);">
-      <button onClick="{{ toggleArticle2 }}" style="display: flex; width: 100%; flex-wrap: wrap; gap: var(--space-4); align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0; font-family: inherit; color: inherit;">
-        <img src="assets/blog-artigo-2.jpg" alt="" style="width: 220px; height: 150px; object-fit: cover; border-radius: var(--radius-md); flex: none; box-shadow: var(--shadow-sm);">
-        <div style="flex: 1 1 320px; display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);">
-          <div>
-            <h3 class="card-title" style="margin-bottom: var(--space-1);">As Marcas Invisíveis: Como o Trauma Infantil Impacta a Vida Adulta sob a Ótica da TRG</h3>
-            <p style="opacity: 0.75; margin: 0;">Como marcas emocionais da infância moldam a vida adulta, e como a Terapia de Reprocessamento Generativo propõe trabalhar essas memórias.</p>
-          </div>
-          <span style="font-size: 26px; line-height: 1; color: var(--color-accent); flex: none;">{{ article2Symbol }}</span>
-        </div>
-      </button>
-
-      <sc-if value="{{ article2Open }}" hint-placeholder-val="{{ false }}">
-        <article style="max-width: 68ch; margin-top: var(--space-6);">
-          <h2 style="font-size: 28px; margin-bottom: var(--space-4);">As Marcas Invisíveis: Como o Trauma Infantil Impacta a Vida Adulta sob a Ótica da Terapia de Reprocessamento Generativo (TRG)</h2>
-          <p style="font-size: 17px;">Nem toda ferida é visível. Muitas vezes, os traumas mais profundos não deixam cicatrizes físicas, mas moldam silenciosamente a forma como pensamos, sentimos e nos relacionamos com o mundo. A infância, fase em que estamos mais abertos e vulneráveis, pode deixar registros inconscientes que acompanham uma pessoa ao longo da vida, influenciando desde suas emoções até suas escolhas profissionais e afetivas.</p>
-          <p style="font-size: 17px;">A Terapia de Reprocessamento Generativo (TRG), criada pelo psicólogo e professor brasileiro Jair Soares, propõe um novo olhar sobre essas marcas invisíveis. Diferente das abordagens tradicionais focadas na fala, a TRG atua diretamente nos registros inconscientes, buscando promover uma reorganização emocional dessas memórias.</p>
-
-          <h4 style="margin-top: var(--space-6);">O trauma infantil e o inconsciente</h4>
-          <p style="font-size: 17px;">Muitos adultos enfrentam ansiedade, insegurança, medo de rejeição, baixa autoestima ou compulsões sem entender exatamente de onde vêm esses sentimentos. Segundo a TRG, essas questões muitas vezes estão enraizadas em vivências da infância que foram registradas pelo inconsciente de forma dolorosa, como rejeições, críticas severas, abandono, violência, ou mesmo situações que pareceriam pequenas para um adulto, mas que tiveram grande impacto emocional para uma criança.</p>
-          <p style="font-size: 17px;">Esses registros permanecem ativos, influenciando reações automáticas e padrões de comportamento. Como não estão acessíveis pela razão ou pela memória consciente, muitas vezes parecem "sem explicação", o que gera ainda mais frustração para quem os carrega.</p>
-
-          <h4 style="margin-top: var(--space-6);">Como a TRG trabalha essas marcas do passado</h4>
-          <p style="font-size: 17px;">A TRG propõe uma forma de acesso e reestruturação dessas memórias inconscientes. Apoiada nos princípios da neuroplasticidade, a capacidade do cérebro de criar novas conexões, a terapia trabalha o reprocessamento emocional de experiências antigas, buscando substituir interpretações limitantes por percepções mais saudáveis.</p>
-          <p style="font-size: 17px;">A técnica é estruturada em cinco métodos principais, adaptados às necessidades de cada pessoa:</p>
-          <ul style="font-size: 17px; padding-left: 1.2em; margin: 0 0 var(--space-3);">
-            <li><strong>Cronológico.</strong> Trabalha a linha do tempo da vida, revendo experiências desde a infância até o presente.</li>
-            <li><strong>Somático.</strong> Atua sobre as sensações físicas associadas a traumas, como tensões e bloqueios corporais.</li>
-            <li><strong>Temático.</strong> Foca em temas recorrentes, como medo, rejeição ou abandono.</li>
-            <li><strong>Futuro.</strong> Aborda ansiedades ligadas ao porvir, ajudando o paciente a construir uma visão mais segura do que está por vir.</li>
-            <li><strong>Potencialização.</strong> Fortalece recursos internos, como coragem, autoestima e amor-próprio.</li>
-          </ul>
-
-          <h4 style="margin-top: var(--space-6);">Por que muitas vezes não conseguimos superar sozinhos</h4>
-          <p style="font-size: 17px;">É comum ouvir frases como "isso já passou", "foi no passado", "preciso ser forte". Mas quando a dor está registrada no inconsciente, a razão sozinha raramente é suficiente para transformá-la. Não se trata de fraqueza, e sim de condicionamentos profundos que costumam precisar de uma abordagem terapêutica específica para serem trabalhados.</p>
-
-          <h4 style="margin-top: var(--space-6);">Onde a TRG tem sido usada como recurso</h4>
-          <p style="font-size: 17px;">Na minha prática, tenho utilizado a TRG como parte do acompanhamento em situações como:</p>
-          <ul style="font-size: 17px; padding-left: 1.2em; margin: 0 0 var(--space-3);">
-            <li>Ansiedade e estresse</li>
-            <li>Fobias e medos irracionais</li>
-            <li>Sintomas depressivos</li>
-            <li>Padrões obsessivos e compulsivos</li>
-            <li>Traumas de infância</li>
-            <li>Crises de pânico</li>
-            <li>Dificuldade em relacionamentos</li>
-            <li>Luto prolongado</li>
-          </ul>
-          <p style="font-size: 17px;">Os resultados variam de pessoa para pessoa, como em qualquer processo terapêutico, e a TRG não substitui acompanhamento médico ou psiquiátrico quando este for necessário. A técnica é indicada para pessoas de todas as idades, incluindo crianças que já compreendam as orientações do processo e idosos com plena cognição.</p>
-
-          <h4 style="margin-top: var(--space-6);">Para fechar</h4>
-          <p style="font-size: 17px;">As feridas emocionais da infância não precisam acompanhar ninguém para sempre. A Terapia de Reprocessamento Generativo, criada pelo professor Jair Soares, oferece uma abordagem que busca trabalhar essas marcas de forma profunda e respeitosa.</p>
-          <p style="font-size: 17px;">Se você sente que carrega dores antigas, padrões que se repetem ou bloqueios emocionais, e quer entender se a TRG faz sentido para o seu momento, entre em contacto comigo para agendarmos uma conversa inicial sem compromisso.</p>
-        </article>
-      </sc-if>
-    </div>
-
-    <div style="max-width: 780px; margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-divider);">
-      <button onClick="{{ toggleArticle3 }}" style="display: flex; width: 100%; flex-wrap: wrap; gap: var(--space-4); align-items: center; text-align: left; background: none; border: none; cursor: pointer; padding: 0; font-family: inherit; color: inherit;">
-        <img src="assets/blog-artigo-3.jpg" alt="" style="width: 220px; height: 150px; object-fit: cover; border-radius: var(--radius-md); flex: none; box-shadow: var(--shadow-sm);">
-        <div style="flex: 1 1 320px; display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);">
-          <div>
-            <h3 class="card-title" style="margin-bottom: var(--space-1);">Quando o corpo fala: somatizações emocionais e saúde mental</h3>
-            <p style="opacity: 0.75; margin: 0;">Por que emoções não elaboradas viram dor, tensão e sintomas físicos, e o que fazer a respeito.</p>
-          </div>
-          <span style="font-size: 26px; line-height: 1; color: var(--color-accent); flex: none;">{{ article3Symbol }}</span>
-        </div>
-      </button>
-
-      <sc-if value="{{ article3Open }}" hint-placeholder-val="{{ false }}">
-        <article style="max-width: 68ch; margin-top: var(--space-6);">
-          <h2 style="font-size: 28px; margin-bottom: var(--space-4);">Quando o corpo fala: somatizações emocionais e saúde mental</h2>
-
-          <h4>O corpo guarda o que a mente não dá conta</h4>
-          <p style="font-size: 17px;">Quem nunca sentiu um aperto no peito em momentos de ansiedade. Ou aquela dor de cabeça que aparece sempre depois de um dia estressante. Isso é somatização, quando emoções não elaboradas se transformam em sintomas físicos.</p>
-          <p style="font-size: 17px;">Nosso corpo fala. Às vezes em forma de dores, tensões, insônia ou sintomas físicos recorrentes que, mesmo depois de avaliação médica, não têm uma causa orgânica clara.</p>
-
-          <h4 style="margin-top: var(--space-6);">Mente e corpo, inseparáveis</h4>
-          <p style="font-size: 17px;">A conexão entre saúde emocional e saúde física é bem documentada. Emoções sustentadas por muito tempo sem espaço de elaboração afetam sistemas do corpo, incluindo o imunológico, o digestivo, o cardiovascular e o nervoso.</p>
-          <p style="font-size: 17px;">Quando reprimimos sentimentos por tempo suficiente, o corpo costuma encontrar um jeito de expressá-los. É como se ele dissesse, olhe para isso, você precisa cuidar de si.</p>
-
-          <h4 style="margin-top: var(--space-6);">Por que isso acontece</h4>
-          <p style="font-size: 17px;">Emoções que não são nomeadas ou processadas não desaparecem, elas ficam armazenadas. Em muitos casos, a pessoa nem percebe que carrega uma tensão emocional antiga, só sente o efeito dela no corpo, anos depois, sob outra forma.</p>
-          <p style="font-size: 17px;">Isso não é fraqueza nem exagero. É uma resposta do organismo a algo que não teve onde ser elaborado no momento em que aconteceu.</p>
-
-          <h4 style="margin-top: var(--space-6);">O que ajuda na prática</h4>
-          <ul style="font-size: 17px; padding-left: 1.2em; margin: 0 0 var(--space-3);">
-            <li>Investigar primeiro a causa médica de qualquer sintoma físico persistente, com exames adequados.</li>
-            <li>Depois de descartar ou tratar a causa orgânica, considerar se há um componente emocional associado.</li>
-            <li>Buscar um espaço terapêutico onde seja possível nomear o que está sendo sentido, não só o que dói.</li>
-            <li>Cuidar de sono, alimentação e movimento como parte do processo, não como acessório.</li>
-            <li>Nunca interromper ou alterar medicação por conta própria, isso deve ser sempre decisão conjunta com quem acompanha clinicamente.</li>
-          </ul>
-
-          <h4 style="margin-top: var(--space-6);">Escutar o corpo é autocuidado</h4>
-          <p style="font-size: 17px;">O corpo não é inimigo, ele é mensageiro. Ignorar seus sinais tende a prolongar o sofrimento. Escutá-lo, com apoio terapêutico adequado, é abrir espaço para um cuidado que junta corpo, mente e emoção em vez de tratá-los como coisas separadas.</p>
-          <p style="font-size: 17px;">Você tem percebido o corpo falando através de sintomas? Talvez seja o momento de escutar essa voz, com o suporte certo, em vez de silenciá-la de novo.</p>
-        </article>
-      </sc-if>
-    </div>
-
-  </section>
-
-  <section id="faq" style="padding: var(--space-8) 0;">
-    <h6 style="color: var(--color-accent-700);">Perguntas frequentes</h6>
-    <div style="display: flex; flex-direction: column; max-width: 70ch; margin-top: var(--space-4);">
-      <sc-for list="{{ faqItems }}" as="item" hint-placeholder-count="5">
-        <div style="border-bottom: 1px solid var(--color-divider);">
-          <button onClick="{{ item.toggle }}" style="display: flex; width: 100%; justify-content: space-between; align-items: center; gap: var(--space-3); background: none; border: none; cursor: pointer; text-align: left; padding: var(--space-3) 0; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17px; color: var(--color-text);">
-            <span>{{ item.question }}</span>
-            <span style="font-size: 20px; line-height: 1; color: var(--color-accent); flex: none;">{{ item.symbol }}</span>
-          </button>
-          <sc-if value="{{ item.isOpen }}" hint-placeholder-val="{{ false }}">
-            <p style="opacity: 0.8; padding-bottom: var(--space-3); margin: 0;">{{ item.answer }}</p>
-          </sc-if>
-        </div>
-      </sc-for>
-    </div>
-  </section>
-
-  <section id="contato" style="padding: var(--space-8) 0;">
-    <h6 style="color: var(--color-accent-700);">Contato</h6>
-    <h2 style="margin-bottom: var(--space-3);">Vamos conversar</h2>
-    <p style="max-width: 55ch; margin-bottom: var(--space-4);">Atendimento on-line, em português. Fale pelo WhatsApp ou envie um e-mail para agendar.</p>
-    <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center;">
-      <a class="btn btn-primary" href="{{ whatsappUrl }}" target="_blank" rel="noopener">
-        {{ whatsappIcon }}
-        Falar no WhatsApp
-      </a>
-      <a class="btn btn-secondary" href="{{ mailtoHref }}">
-        {{ emailIcon }}
-        {{ email }}
-      </a>
-    </div>
-  </section>
-
-  <footer style="padding: var(--space-6) 0 var(--space-8); opacity: 0.6; font-size: 13px; display: flex; align-items: center; gap: var(--space-2);">
-    <img src="assets/logo-raiz-do-sentir.png" alt="" style="width: 24px; height: 24px; border-radius: 50%; display: block;">
-    Raiz do Sentir · Jefferson Delgado, Psicanalista e Terapeuta Integrativo · Atendimento online
+    <section class="contact" id="contato">
+      <div class="reveal"><span class="section-kicker">Um primeiro passo possível</span><h2 class="display">Vamos conversar sobre o que você está vivendo?</h2></div>
+      <div class="reveal"><p>Envie uma mensagem. Você recebe as informações sobre atendimento, horários e o formato mais adequado para sua necessidade.</p><div class="contact-actions"><a class="btn" href="https://wa.me/447577423115?text=Ol%C3%A1%2C%20Jefferson.%20Conheci%20seu%20trabalho%20atrav%C3%A9s%20do%20site%20Raiz%20do%20Sentir%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia." target="_blank" rel="noopener">Falar no WhatsApp <span class="arrow">↗</span></a><a class="btn secondary" href="mailto:contato@raizdosentir.com">Enviar e-mail</a></div></div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-grid"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><img src="assets/raiz-do-sentir-logo.jpg" alt=""></span><span class="brand-name">Raiz do Sentir<small>Jefferson Delgado</small></span></a><div class="footer-col"><span>Contato</span><a href="mailto:contato@raizdosentir.com">contato@raizdosentir.com</a><a href="tel:+447577423115">+44 7577 423115</a></div><div class="footer-col"><span>Acompanhe</span><a href="blog.html">Conteúdos</a><a href="https://www.instagram.com/raizdosentir" target="_blank" rel="noopener">Instagram</a></div></div>
+    <div class="legal"><span>© 2026 Raiz do Sentir. Atendimento terapêutico online.</span><span>Em situação de risco imediato, procure o serviço de emergência da sua região.</span></div>
   </footer>
-
-</div>
-
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{
-  &quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1200},
-  &quot;whatsappUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://wa.me/message/ACBMMR3QD5I6D1&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contato&quot;},
-  &quot;email&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;contato@raizdosentir.com&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contato&quot;}
-}">
-const FAQ_DATA = [
-  { question: "O atendimento é presencial ou online?", answer: "Todo o atendimento é online, em português, para pessoas em qualquer lugar do mundo." },
-  { question: "Você atende quem mora fora do Brasil?", answer: "Sim. Jefferson vive no Reino Unido desde 2010 e atende em português, adaptando horários a diferentes fusos." },
-  { question: "Qual a diferença entre a terapia individual e os grupos terapêuticos?", answer: "Na terapia individual o trabalho é construído a partir do seu momento específico, no seu ritmo. Os grupos terapêuticos, Ansiedade sob Controle e Travessia, seguem um protocolo estruturado, com um tema comum e encontros ao vivo com outras pessoas passando por situações parecidas." },
-  { question: "A hipnoterapia é usada em todos os atendimentos?", answer: "Não. A abordagem é integrativa, com base na psicanálise, e a hipnoterapia clínica é um recurso usado quando o caso pede algo mais direto do que a conversa." },
-  { question: "Como agendar uma sessão ou entrar em um grupo?", answer: "Pelo WhatsApp ou e-mail, com os contatos ao final desta página." },
-];
-
-class Component extends DCLogic {
-  state = { openFaqIndex: null, articleOpen: false, article2Open: false, article3Open: false, article4Open: false, article5Open: false };
-  renderVals() {
-    const whatsappUrl = this.props.whatsappUrl ?? "https://wa.me/message/ACBMMR3QD5I6D1";
-    const email = this.props.email ?? "contato@raizdosentir.com";
-    const faqItems = FAQ_DATA.map((f, i) => ({
-      question: f.question,
-      answer: f.answer,
-      isOpen: this.state.openFaqIndex === i,
-      symbol: this.state.openFaqIndex === i ? "\u2212" : "+",
-      toggle: () => this.setState(s => ({ openFaqIndex: s.openFaqIndex === i ? null : i })),
-    }));
-    const iconProps = { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round" };
-    const whatsappIcon = React.createElement("svg", iconProps,
-      React.createElement("rect", { x: 2, y: 4, width: 20, height: 14, rx: 4 }),
-      React.createElement("path", { d: "M8 18 L8 22 L13 18 Z", fill: "currentColor", stroke: "none" })
-    );
-    const emailIcon = React.createElement("svg", iconProps,
-      React.createElement("rect", { x: 2, y: 4, width: 20, height: 14, rx: 2 }),
-      React.createElement("path", { d: "M3 5 L12 13 L21 5" })
-    );
-    return {
-      whatsappUrl,
-      email,
-      mailtoHref: "mailto:" + email,
-      whatsappIcon,
-      emailIcon,
-      faqItems,
-      articleOpen: this.state.articleOpen,
-      articleSymbol: this.state.articleOpen ? "\u2212" : "+",
-      toggleArticle: () => this.setState(s => ({ articleOpen: !s.articleOpen })),
-      article2Open: this.state.article2Open,
-      article2Symbol: this.state.article2Open ? "\u2212" : "+",
-      toggleArticle2: () => this.setState(s => ({ article2Open: !s.article2Open })),
-      article3Open: this.state.article3Open,
-      article3Symbol: this.state.article3Open ? "\u2212" : "+",
-      toggleArticle3: () => this.setState(s => ({ article3Open: !s.article3Open })),
-      article4Open: this.state.article4Open,
-      article4Symbol: this.state.article4Open ? "\u2212" : "+",
-      toggleArticle4: () => this.setState(s => ({ article4Open: !s.article4Open })),
-      article5Open: this.state.article5Open,
-      article5Symbol: this.state.article5Open ? "\u2212" : "+",
-      toggleArticle5: () => this.setState(s => ({ article5Open: !s.article5Open })),
-    };
-  }
-}
-
-</script>
+  <script>
+    const nav=document.getElementById('nav'),menu=document.getElementById('menu'),links=document.getElementById('links');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
+    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'×':'☰'});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const testimonialTrack=document.getElementById('testimonial-track');
+    document.querySelectorAll('[data-testimonial-scroll]').forEach(button=>button.addEventListener('click',()=>testimonialTrack.scrollBy({left:(button.dataset.testimonialScroll==='next'?1:-1)*Math.min(458,innerWidth*.86),behavior:'smooth'})));
+  </script>
 </body>
 </html>
